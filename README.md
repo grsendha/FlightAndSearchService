@@ -22,3 +22,16 @@ Follow these steps to set up the project:
    ```
    Replace `<DB_LOGIN>` and `<DB_PASSWORD>` with your actual database login and password.
 
+- Once you added your db config as listed above,go to src folder and execute command
+`npm sequelize db:create`
+then
+`npm sequelize db:migrate`
+
+
+## DB Design
+  - Airplane
+  - Flight
+  - Airport
+  - City
+
+  
