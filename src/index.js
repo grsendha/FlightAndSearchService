@@ -1,9 +1,12 @@
 const express = require("express");
 const { PORT } = require("./config/serverConfig");
+const bodyParser = require("body-parser");
 
 async function setupAndStartServer() {
   const app = express();
-  const PORT = process.env.PORT || 3000;
+
+  app.use(bodyParser.urlencoded({ extended: true }));
+  app.use(bodyParser.json());
 
   app.get("/", (req, res) => {
     res.send("Hello World!");
