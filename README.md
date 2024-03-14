@@ -38,4 +38,10 @@ npm sequelize db:migrate
   - Airport
   - City
 
+## Tables
+
+### City-> id,name,created_at,updated_at
+### Airport-> id,name,city_id,created_at,updated_at
+    Relationship->City has many airport belongs to a city(one to many)
+
   

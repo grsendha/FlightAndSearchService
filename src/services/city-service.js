@@ -40,6 +40,15 @@ class CityService {
       throw { error };
     }
   }
+  async getAllCities(filter) {
+    try {
+      const cities = this.cityRepository.getAllCities({ name: filter.name });
+      return cities;
+    } catch (error) {
+      console.log("something went wrong ");
+      throw { error };
+    }
+  }
 }
 
 module.exports = CityService;
