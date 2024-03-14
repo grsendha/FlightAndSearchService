@@ -3,7 +3,7 @@
 Follow these steps to set up the project:
 
 1. **Clone the project**: Use Git to clone the project repository to your local machine.
-2. **Install Dependencies**: Navigate to the project directory and run `npm install` to install the required dependencies.
+2. **Install Dependencies**: Navigate to the project directory and run ```npm install``` to install the required dependencies.
 3. **Environment Variables**: Create a `.env` file in the root directory of the project. Add the following line to specify the server port:
    ```
    PORT=3000
@@ -23,9 +23,13 @@ Follow these steps to set up the project:
    Replace `<DB_LOGIN>` and `<DB_PASSWORD>` with your actual database login and password.
 
 - Once you added your db config as listed above,go to src folder and execute command
-`npm sequelize db:create`
+```
+npm sequelize db:create
+```
 then
-`npm sequelize db:migrate`
+```
+npm sequelize db:migrate
+```
 
 
 ## DB Design
