@@ -33,7 +33,7 @@ class CityService {
   }
   async getCity(cityId) {
     try {
-      const city = this.cityRepository.getCity(cityId, data);
+      const city = this.cityRepository.getCity(cityId);
       return city;
     } catch (error) {
       console.log("something went wrong ");
@@ -41,3 +41,5 @@ class CityService {
     }
   }
 }
+
+module.exports = CityService;

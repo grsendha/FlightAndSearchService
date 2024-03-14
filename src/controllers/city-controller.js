@@ -15,7 +15,7 @@ const create = async (req, res) => {
     } catch (error) {
         console.log("something went wrong ", error);
         return res.status(500).json({
-            data: null,
+            data: '',
             success: false,
             message: "Not able to create city",
             err: error,
@@ -35,7 +35,7 @@ const destroy = async (req, res) => {
     } catch (error) {
         console.log("something went wrong ", error);
         return res.status(500).json({
-            data: null,
+            data: '',
             success: false,
             message: "Not able to delete city",
             err: error,
@@ -55,7 +55,7 @@ const get = async (req, res) => {
     } catch (error) {
         console.log("something went wrong ", error);
         return res.status(500).json({
-            data: null,
+            data: '',
             success: false,
             message: "Not able to get city",
             err: error,
@@ -75,7 +75,7 @@ const update = async (req, res) => {
     } catch (error) {
         console.log("something went wrong ", error);
         return res.status(500).json({
-            data: null,
+            data: '',
             success: false,
             message: "Not able to update city",
             err: error,
