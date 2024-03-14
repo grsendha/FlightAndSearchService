@@ -3,21 +3,40 @@ const { City } = require("../models/index");
 class CityRepository {
   async createCity({ name }) {
     try {
-      return City.create({ name });
+      const city = await City.create({ name });
+      return city;
     } catch (error) {
-      throw {
-        error: error.message,
-      };
+      console.log("Error in creating");
+      throw { error };
     }
   }
-
-  async deleteCity({ id }) {
+  async deleteCity(cityId) {
     try {
-      return City.destroy({ where: { id } });
+      await City.destroy({ where: { id: cityId } });
+      return true;
     } catch (error) {
-      throw {
-        error: error.message,
-      };
+      console.log("Error in Deleting");
+      throw { error };
+    }
+  }
+  async updateCity(cityId, data) {
+    try {
+      const city = await City.update(data, {
+        where: { id: cityId },
+      });
+      return city;
+    } catch (error) {
+      console.log("Error in Updating");
+      throw { error };
+    }
+  }
+  async getCity(cityId) {
+    try {
+      const city = await City.findByPk(cityId);
+      return city;
+    } catch (error) {
+      console.log("Error in Getting");
+      throw { error };
     }
   }
 }
