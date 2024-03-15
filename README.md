@@ -44,4 +44,6 @@ npm sequelize db:migrate
 ### Airport-> id,name,city_id,created_at,updated_at
     Relationship->City has many airport belongs to a city(one to many)
 
-  
+```
+npx sequelize model:generate --name Airport --attributes name:string,address:string,cityId:integer
+```
