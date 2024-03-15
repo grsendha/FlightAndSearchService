@@ -12,7 +12,7 @@ async function setupAndStartServer() {
 
   app.use('/api', ApiRoutes);
 
-  app.listen(PORT, () => {
+  app.listen(4230, () => {
     console.log(`Server is running on port ${PORT}`);
     // const repo = new CityRepository();
     // repo.createCity({ name: "Cuttack" });
