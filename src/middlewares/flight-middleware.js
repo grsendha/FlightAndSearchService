@@ -1,6 +1,6 @@
-const { ClientErrorCodes } = require('../utils/error-codes');
+const { ClientErrorCodes } = require("../utils/error-codes");
 
-const validateCreatelFlight = async (req, res, next) => {
+const validateCreateFlight = async (req, res, next) => {
   if (
     !req.body.flightNumber ||
     !req.body.airplaneId ||
@@ -14,11 +14,10 @@ const validateCreatelFlight = async (req, res, next) => {
       data: {},
       success: false,
       message: "All fields are required",
-      error: 'Mandatory fileds missing'
-    })
+      error: "Mandatory fileds missing",
+    });
   }
   next();
-}
+};
 
-
-module.exports = validateCreatelFlight;
+module.exports = { validateCreateFlight };
